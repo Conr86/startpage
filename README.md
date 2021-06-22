@@ -28,7 +28,7 @@ npm i
 npm run build
 ```
 
-5. If you are using Chrome, click "Load Unpacked" in the Extensions settings and then select the `public` folder. You are finished!
+5. If you are using Chrome or Edge, click "Load Unpacked" in the Extensions settings (It is an icon in Edge) and then select the `public` folder. You are finished!
 
 6. If you are using Firefox, enter the `public` folder. Then sign the extension with an api key and api secret from https://addons.mozilla.org/developers/addon/api/key/.
 ```
