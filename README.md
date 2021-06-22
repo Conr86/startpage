@@ -11,7 +11,7 @@ A simple startpage made with Svelte and Openweathermap API.
 git clone https://github.com/refact0r/startpage
 ```
 
-3. Enter the folder
+3. Enter the folder.
 ```
 cd startpage
 ```
@@ -36,4 +36,4 @@ cd public
 web-ext sign --api-key=$API_KEY --api-secret=$API_SECRET
 ```
 
-7. After it is finished, you should see a folder called `web-ext-artifacts` with a `.xpi` file inside. Go to the Extensions settings in Firefox, click "Install Add-on From File...", and select the `.xpi` file.
+7. After signing is finished, you should see a folder called `web-ext-artifacts` with a `.xpi` file inside. Go to the Extensions settings in Firefox, click "Install Add-on From File...", and select the `.xpi` file.
