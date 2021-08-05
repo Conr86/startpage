@@ -2,6 +2,8 @@
 
 A simple startpage made with Svelte and Openweathermap API.
 
+Works great with https://github.com/akshat46/FlyingFox.
+
 ![preview](./preview.png)
 
 ## Using this startpage
