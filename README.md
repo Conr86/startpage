@@ -13,11 +13,6 @@ Works great with https://github.com/akshat46/FlyingFox.
 git clone https://github.com/refact0r/startpage
 ```
 
-3. Enter the folder.
-```
-cd startpage
-```
-
 2. Install dependencies.
 ```
 npm i
