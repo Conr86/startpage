@@ -2,7 +2,7 @@
 
 A simple startpage made with Svelte, Unsplash and Openweathermap API.
 
-![preview](./preview.png)
+![preview](./screenshot.png)
 
 ## Using this startpage
 
