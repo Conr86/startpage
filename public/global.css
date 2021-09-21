@@ -1,9 +1,9 @@
 * {
-    --bg-color: #192330;
-    --bg2-color: #1c2736;
+    --bg-color: #344f5f;
+    --bg2-color: #2b6aa470;
     --text-light-color: #dee5ed;
-    --text-color: #AFC0D5;
-    --text-dark-color: #587ca7;
+    --text-color: #DDE5F0;
+    --text-dark-color: #cecfdb;
     --sun-color: hsl(40, 70%, 60%);
     --moon-color: hsl(0, 0%, 70%);
     --cloud-color: hsl(200, 30%, 80%);
@@ -15,11 +15,170 @@ body {
     height: 100vh;
     width: 100%;
     margin: 0;
-    background: var(--bg-color);
     color: var(--text-color);
     font-family: Cascadia Code;
     font-size: 1.2rem;
     font-weight: 200;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("https://source.unsplash.com/1920x1080/?nature,forest,mountain,water");
+
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: inherit;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+}
+
+#box {
+    display: flex;
+    width: 70rem;
+    height: 32rem;
+    margin: auto;
+    background: var(--bg2-color);
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem #00000050;
+    animation: appear 0.4s ease-out forwards;
+	padding-right: 1.5rem;
+}
+#image-container {
+    display: inline-block;
+    position: relative;
+    height: inherit;
+	margin-right: 1.5rem;
+}
+#image {
+    height: inherit;
+    border-radius: 1rem 0 0rem 1rem;
+    filter: brightness(0.8);
+}
+#time {
+    position: absolute;
+    width: 3.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0%);
+    padding: 1rem;
+    overflow-wrap: break-word;
+    text-align: center;
+    font-size: 3.5rem;
+    background: #00000050;
+    color: var(--text-light-color);
+    border-radius: 1rem;
+    mix-blend-mode: overlay;
+    animation: time-appear 0.4s ease-out 0.2s forwards;
+}
+#inner-box {
+    width: 100%;
+    padding: 4rem;
+}
+h1 {
+    margin: 0;
+    font-weight: inherit;
+    font-size: 2rem;
+    opacity: 0;
+    animation: text-appear 0.4s ease-out 0.2s forwards;
+}
+h2 {
+    margin: 0;
+    font-weight: inherit;
+    font-size: 1.5rem;
+    opacity: 0;
+    animation: text-appear 0.4s ease-out 0.25s forwards;
+}
+#links {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+.link-column {
+    opacity: 0;
+}
+#link-column-1 {
+    animation: text-appear 0.4s ease-out 0.3s forwards;
+}
+#link-column-2 {
+    animation: text-appear 0.4s ease-out 0.325s forwards;
+}
+#link-column-3 {
+    animation: text-appear 0.4s ease-out 0.35s forwards;
+}
+#link-column-4 {
+    animation: text-appear 0.4s ease-out 0.4s forwards;
+}
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text-dark-color);
+    transition: 0.3s ease;
+}
+.arrow {
+    display: inline-block;
+    transform: translate(-22px);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+.text {
+    display: inline-block;
+    transform: translate(-22px);
+    transition: 0.3s ease;
+}
+a:hover {
+    color: var(--text-color);
+}
+a:hover .arrow {
+    transform: none;
+    opacity: 1;
+}
+a:hover .text {
+    transform: none;
+}
+a:active:hover {
+    transform: scale(0.9);
+}
+br {
+    line-height: 2rem;
+}
+#weather-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 4rem 5rem;
+    opacity: 0;
+    animation: weather-appear 0.4s ease-out 0.4s forwards;
+}
+#temperature {
+    display: inline-block;
+    margin: 0.3rem 0.2rem 0 0;
+    font-size: 1.5rem;
+    vertical-align: top;
+}
+#version {
+    position: absolute;
+    margin: 1rem;
+    bottom: 0;
+    right: 0;
+    color: var(--text-dark-color);
 }
 
 .weather-icon {
